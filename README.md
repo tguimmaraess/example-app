@@ -6,7 +6,9 @@ This is a simple Laravel Application using best practices and separation of the 
 This relies on services that have many benefits, inluding abstracting the business logic in these classes, making the controllers shorter, cleaner, more organized,
 not to mention it makes maintenance easier and increases reusability. 
 
-To start, import the `example_app.sql` sql file. database name: `example_app`
+To start, import the `example_app.sql` sql file located in `database` folder.  
+
+The name of the database is `example_app`
 
 After: `php artisan serve`
 
