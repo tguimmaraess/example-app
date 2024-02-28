@@ -1,5 +1,5 @@
 # example-app
-Example app with DDD
+Example app with DDD according to Laravel standards
 
 This is a simple Laravel Application using best practices and separation of the application in layers.
 
