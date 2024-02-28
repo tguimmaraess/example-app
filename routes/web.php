@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 use App\Http\Controllers\Client\ClientAuthenticationController;
 use App\Http\Controllers\Client\ClientController;
-use App\Http\Controllers\Client\ClientOrdersController;
+use App\Http\Controllers\Order\OrdersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,17 +32,17 @@ Route::get('/log-out',  [ClientAuthenticationController::class, 'logOut']);
 
 Route::get('/dashboard', [ClientController::class, 'dashboard'])->middleware('auth')->name('client-dashboard');
 
-Route::get('/orders', [ClientOrdersController::class, 'index'])->middleware('auth')->name('client-orders');
+Route::get('/orders', [OrdersController::class, 'index'])->middleware('auth')->name('client-orders');
 
-Route::get('/search-orders', [ClientOrdersController::class, 'search'])->middleware('auth');
+Route::get('/search-orders', [OrdersController::class, 'search'])->middleware('auth');
 
-Route::get('/cancel-order/{orderId}', [ClientOrdersController::class, 'cancel'])->middleware('auth');
+Route::get('/cancel-order/{orderId}', [OrdersController::class, 'cancel'])->middleware('auth');
 
-Route::get('/reset-order-status/{orderId}', [ClientOrdersController::class, 'reset'])->middleware('auth');
+Route::get('/reset-order-status/{orderId}', [OrdersController::class, 'reset'])->middleware('auth');
 
-Route::get('/order/{id}', [ClientOrdersController::class, 'show'])->middleware('auth')->name('client-order');
+Route::get('/order/{id}', [OrdersController::class, 'show'])->middleware('auth')->name('client-order');
 
-Route::get('/profile', [ClientController::class, 'profile'])->middleware('auth')->name('client-profile');
+Route::get('/profile', [Controller::class, 'profile'])->middleware('auth')->name('client-profile');
 
 Route::post('/save-login-details', [ClientController::class, 'saveLoginDetails'])->middleware('auth');
 

@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\Client;
+namespace App\Http\Controllers\Order;
 
 use Illuminate\Http\Request;
-use App\Services\Client\ClientService;
+use App\Services\Order\ClientService;
 use App\Services\Order\OrderService;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 
 /**
  * 
- * Client orders controller performs various actions related to the customer's orders
+ * Orders controller performs various actions related to the customer's orders
  */
 
-class ClientOrdersController
+class OrdersController
 {
 
     /**
