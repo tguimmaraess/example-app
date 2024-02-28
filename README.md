@@ -13,3 +13,7 @@ The name of the database is `example_app`
 After `composer install` and then `php artisan serve`
 
 It will run on 127.0.0.1:8000
+
+Credentials: 
+email: user@demo.com
+password: 12345678
